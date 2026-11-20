@@ -1,0 +1,409 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font:
+    15px "Segoe UI",
+    system-ui,
+    sans-serif;
+  color: #193732;
+  background: #f4f6f2;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+button:focus-visible,
+select:focus-visible,
+input:focus-visible {
+  outline: 3px solid #178875;
+  outline-offset: 3px;
+}
+.shell {
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 42px;
+}
+header {
+  background: #102e2b;
+  color: white;
+}
+.head,
+.brand,
+nav,
+.connection,
+.heading,
+.section,
+.legend,
+.axis,
+.pager,
+footer {
+  display: flex;
+  align-items: center;
+}
+.head {
+  min-height: 74px;
+  gap: 58px;
+}
+.brand {
+  font-size: 25px;
+  font-weight: 650;
+  letter-spacing: -1px;
+  gap: 12px;
+}
+.mark {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.mark i {
+  width: 3px;
+  border-radius: 2px;
+  background: #addec3;
+}
+nav {
+  gap: 24px;
+  align-self: stretch;
+}
+nav button {
+  color: #c3d1ca;
+  background: transparent;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  padding: 2px 0 0;
+}
+nav .selected {
+  color: white;
+  border-color: #b6dfb4;
+}
+.connection {
+  margin-left: auto;
+  font-size: 13px;
+  gap: 8px;
+}
+.connection i,
+.legend i {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #c8ac83;
+}
+.connection .on {
+  background: #aad9ac;
+}
+.heading,
+.section,
+.axis,
+footer {
+  justify-content: space-between;
+}
+.heading {
+  padding: 37px 0 25px;
+}
+.eyebrow,
+footer {
+  font:
+    600 10px/1.6 Consolas,
+    monospace;
+  letter-spacing: 1.6px;
+  color: #567469;
+}
+h1 {
+  font-size: clamp(32px, 4vw, 47px);
+  font-weight: 550;
+  line-height: 1.15;
+  letter-spacing: -2.3px;
+  margin: 6px 0 0;
+}
+.date {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+}
+small,
+.muted {
+  color: #5d7068;
+}
+.date small,
+.metric small {
+  display: block;
+  font-weight: 400;
+  margin-top: 4px;
+}
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid #cad7cc;
+  background: #e8efe6;
+  border-radius: 9px;
+  padding: 18px 0;
+}
+.metric {
+  padding: 0 23px;
+  border-right: 1px solid #c7d5ca;
+}
+.metric:last-child {
+  border: 0;
+}
+.metric label {
+  font-size: 13px;
+  font-weight: 600;
+}
+.metric strong {
+  display: block;
+  font-size: clamp(22px, 2.8vw, 36px);
+  letter-spacing: -1.4px;
+  font-weight: 550;
+  line-height: 1.4;
+}
+.panel {
+  background: #fff;
+  border: 1px solid #d3dbd3;
+  border-radius: 9px;
+  margin-top: 19px;
+  overflow: hidden;
+}
+.section {
+  padding: 17px 21px;
+  gap: 12px;
+}
+h2 {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.55px;
+  margin: 0;
+}
+.section button,
+.pager button,
+td button,
+dialog button,
+[role="alert"] button {
+  background: #fff;
+  color: #24594b;
+  border: 1px solid #cbd8ce;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.legend,
+.axis,
+.pager {
+  font-size: 12px;
+  color: #50695f;
+  gap: 7px;
+}
+.legend i {
+  background: #3a836b;
+  border-radius: 2px;
+}
+.graph {
+  display: flex;
+  gap: 10px;
+  height: 94px;
+  margin: 4px 22px 0;
+}
+.ticks,
+.axis {
+  font:
+    11px Consolas,
+    monospace;
+  color: #667b70;
+}
+.ticks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bars {
+  flex: 1;
+  display: flex;
+  align-items: end;
+  gap: 5px;
+  background: repeating-linear-gradient(
+    to top,
+    #e4ebe4 0 1px,
+    transparent 1px 33.3%
+  );
+}
+.bars div {
+  flex: 1;
+  background: #479279;
+  border-radius: 3px 3px 0 0;
+}
+.axis {
+  padding: 8px 21px 16px 39px;
+}
+.scroll {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+th,
+td {
+  padding: 11px 16px;
+  border-top: 1px solid #e3e9e2;
+}
+td:first-child,
+th:first-child {
+  padding-left: 21px;
+}
+th {
+  background: #f6f8f4;
+  color: #596e62;
+  font-size: 12px;
+  font-weight: 550;
+}
+td {
+  font:
+    13px Consolas,
+    monospace;
+}
+.name {
+  font:
+    600 14px "Segoe UI",
+    sans-serif;
+}
+.pill {
+  display: inline-block;
+  border-radius: 4px;
+  font:
+    600 12px "Segoe UI",
+    sans-serif;
+  text-transform: capitalize;
+  padding: 3px 8px;
+}
+.high {
+  background: #f9e3da;
+  color: #8c3a25;
+}
+.medium {
+  background: #f6ebc9;
+  color: #78581e;
+}
+.filters,
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 21px 15px;
+}
+.filters input,
+.filters select {
+  padding: 8px 10px;
+  border: 1px solid #ced9d0;
+  border-radius: 5px;
+  background: #fff;
+  color: inherit;
+  font-size: 13px;
+}
+.filters input {
+  min-width: 225px;
+}
+.pager {
+  justify-content: flex-end;
+  padding-top: 12px;
+}
+.pager button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.empty {
+  padding: 12px 21px;
+  color: #5b6d64;
+}
+footer {
+  margin: 18px 0 26px;
+  gap: 15px;
+  font-size: 10px;
+}
+footer span:last-child {
+  letter-spacing: 0;
+  font-weight: 400;
+}
+dialog {
+  max-width: min(94vw, 480px);
+  width: 480px;
+  color: inherit;
+  border: 1px solid #c4d5c7;
+  border-radius: 10px;
+  padding: 20px;
+}
+dialog::backdrop {
+  background: #0b272aa3;
+}
+dialog .section {
+  padding: 0;
+}
+dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 14px;
+}
+dt,
+dd {
+  padding: 8px 0;
+  border-bottom: 1px solid #dce5dd;
+  margin: 0;
+}
+dt {
+  text-transform: capitalize;
+}
+dd {
+  text-align: right;
+  font-family: Consolas, monospace;
+}
+@media (max-width: 760px) {
+  .shell {
+    padding: 0 16px;
+  }
+  .head {
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-top: 12px;
+  }
+  .brand {
+    font-size: 21px;
+  }
+  nav {
+    order: 3;
+    width: 100%;
+    height: 35px;
+  }
+  .metrics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+  }
+  .metric:nth-child(2) {
+    border: 0;
+  }
+  .heading {
+    padding: 24px 0 17px;
+  }
+  .date {
+    font-size: 12px;
+  }
+  .axis span:nth-child(2) {
+    display: none;
+  }
+  .section {
+    padding: 14px;
+  }
+  .metric {
+    padding: 0 14px;
+  }
+  .connection {
+    font-size: 12px;
+  }
+  footer {
+    flex-wrap: wrap;
+  }
+}

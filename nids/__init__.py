@@ -1,0 +1,1 @@
+"""Passive network intrusion monitor."""
